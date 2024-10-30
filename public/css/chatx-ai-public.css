@@ -1,0 +1,153 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.chatx-clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.chatx-clearfix {
+    display: inline-block;
+}
+
+* html .chatx-clearfix {
+    height: 1%;
+}
+
+.chatx-clearfix {
+    display: block;
+}
+
+.chatx-checkbox-plugin,
+.chatx-checkbox-plugin-container {
+    position: relative;
+}
+
+.chatx-speech-bubble {
+    position: absolute;
+    top: -7px;
+    left: 69px;
+    z-index: 123456734352;
+    margin: 0 auto;
+    padding: 10px;
+    width: 240px;
+    height: 65px;
+    border-radius: 5px;
+    transform: rotate(4deg) rotateY(15deg) translate3d(0, 0, 0);
+    background: #717171;
+    font-size: 15px;
+    line-height: normal;
+    text-align: center;
+    display: none;
+}
+
+.chatx-modal-close {
+    background: #f9f9f9;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    border: solid 2px #717171;
+    font-size: 18px;
+    padding: 0;
+    outline: none;
+    line-height: 0px;
+}
+
+.chatx-speech-bubble:before,
+.chatx-speech-bubble:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+}
+
+.chatx-speech-bubble:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: #fff;
+    transform: rotate(0deg) translate(-.01em, 0.01em) scaleX(0.987) scaleY(0.95);
+}
+
+.chatx-speech-bubble:before {
+    border: solid 0 transparent;
+    border-left: solid 50px #fff;
+    border-top: solid 6px #717171;
+    top: 40px;
+    left: -15px;
+    width: 0;
+    height: 1em;
+    transform: rotate(0deg) skewX(75deg);
+}
+
+.chatx-speech-bubble p{
+    font-size: 13px;
+}
+
+
+.chatx-checkbox-plugin .chatx-circle-mark {
+    position: absolute;
+    border: solid 2px #717171;
+    border-radius: 50%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 9px;
+    left: 5px;
+    z-index: 123;
+    display: none;
+}
+
+.chatx-checkbox-plugin.unchecked .chatx-circle-mark {
+    display: block;
+}
+
+.chatx-checkbox-plugin.unchecked:hover .chatx-circle-mark {
+    display: none;
+}
+
+.chatx-checkbox-plugin.unchecked .chatx-speech-bubble {
+    display: block;
+    animation: shake 4s cubic-bezier(.36, .07, .19, .97) both;
+    animation-iteration-count: infinite;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    1%,
+    9% {
+        transform: rotate(4deg) rotateY(15deg) translate3d(-1px, 0, 0);
+    }
+
+    2%,
+    8% {
+        transform: rotate(4deg) rotateY(15deg) translate3d(2px, 0, 0);
+    }
+
+    3%,
+    5%,
+    7% {
+        transform: rotate(4deg) rotateY(15deg) translate3d(-4px, 0, 0);
+    }
+
+    4%,
+    6%,
+    10% {
+        transform: rotate(4deg) rotateY(15deg) translate3d(4px, 0, 0);
+    }
+
+    90% {
+        transform: rotate(4deg) rotateY(15deg) translate3d(4px, 0, 0);
+    }
+}

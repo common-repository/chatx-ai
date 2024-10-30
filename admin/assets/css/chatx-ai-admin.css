@@ -1,0 +1,467 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.ordered-icon:before{
+	font-size: 35px;
+	position: relative;
+	top: -7px;
+}
+
+.ordered-icon.dashicons-yes:before{
+	color: green;
+}
+
+.ordered-icon.dashicons-no:before{
+	font-size: 32px;
+	color:red;
+	top: -5px;
+}
+
+#toplevel_page_chatxai li.wp-first-item {
+	display: none;
+}
+
+.chatxai-dashboard__figure, .chatxai-dashboard__workflows, .chatxai-dashboard-chart, .chatxai-dashboard-list {
+	background: #ffffff;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.chatxai-dashboard__figure, .chatxai-dashboard__workflow {
+	display: block;
+	text-decoration: none;
+}
+
+.chatxai-dashboard__figure:hover, .chatxai-dashboard__workflow:hover {
+	background: #fafafa;
+}
+
+.chatxai-page--dashboard {
+	overflow: hidden;
+}
+
+.chatxai-page--dashboard > .chatxai-register-form {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	filter: blur(200px);
+	-webkit-filter: blur(100px);
+	background: #54C4CA;
+}
+
+.chatxai-page--dashboard > .chatxai-register-form-info {
+	position: absolute;
+	top: calc(50% - 100px);
+	left: -10px;
+	width: 100%;
+	text-align: center;
+	z-index: 1234;
+}
+
+.chatxai-page--dashboard > .chatxai-register-form-info > h1 {
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 700;
+}
+
+.chatxai-page--dashboard > .chatxai-register-form-info > p {
+	width: 70%;
+	margin: 10px auto 30px;
+	font-size: 18px;
+}
+
+.chatxai-dashboard-header {
+	margin: 0 0 20px;
+}
+
+.chatxai-dashboard-date-nav {
+	position: relative;
+	float: right;
+	margin-top: 11px;
+	padding-left: 5px;
+}
+
+.chatxai-dashboard-date-nav__tab {
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #606060;
+	font-weight: 500;
+	font-size: 11px;
+	border: 1px solid #ccc;
+	background: #e5e5e5;
+	padding: 5px 9px;
+	line-height: 1;
+	margin-right: 4px;
+	border-radius: 34px;
+}
+
+@media (min-width: 800px) {
+	.chatxai-dashboard-date-nav__tab {
+		margin-right: 5px;
+		padding: 7px 12px;
+		font-size: 12px;
+	}
+}
+
+.chatxai-dashboard-date-nav__tab:hover, .chatxai-dashboard-date-nav__tab--current {
+	color: #464646;
+	background: #ffffff;
+}
+
+.chatxai-dashboard-widgets {
+	margin-right: -20px;
+	margin-top:100px;
+}
+
+.chatxai-dashboard-widget-sizer {
+	width: calc( 100% - 20px);
+}
+
+@media (min-width: 800px) {
+	.chatxai-dashboard-widget-sizer {
+		width: calc( 50% - 20px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.chatxai-dashboard-widget-sizer {
+		width: calc( 33.33% - 20px);
+	}
+}
+
+@media (min-width: 1750px) {
+	.chatxai-dashboard-widget-sizer {
+		width: calc( 25% - 20px);
+	}
+}
+
+.chatxai-dashboard-widget {
+	margin-bottom: 20px;
+	width: calc( 100% - 20px);
+}
+
+@media (min-width: 800px) {
+	.chatxai-dashboard-widget {
+		width: calc( 50% - 20px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.chatxai-dashboard-widget {
+		width: calc( 33.33% - 20px);
+	}
+}
+
+@media (min-width: 1750px) {
+	.chatxai-dashboard-widget {
+		width: calc( 25% - 20px);
+	}
+}
+
+.chatxai-dashboard-widget--key-figures {
+	margin-bottom: 0;
+}
+
+.chatxai-dashboard__figures {
+	*zoom: 1;
+	margin: 0 -10px;
+}
+
+.chatxai-dashboard__figures:before, .chatxai-dashboard__figures:after {
+	content: " ";
+	display: table;
+}
+
+.chatxai-dashboard__figures:after {
+	clear: both;
+}
+
+.chatxai-dashboard__figure {
+	margin: 0 10px 20px;
+	float: left;
+	width: calc( 100% - 20px);
+	height: 328px;
+	text-align: center;
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 17px 10px 21px;
+}
+
+.chatxai-dashboard__figure-name {
+	color: #aaaaaa;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 12.5px;
+}
+
+.chatxai-dashboard__figure-value {
+	color: #464646;
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 1.3;
+	padding-top: 100px;
+}
+
+.chatxai-dashboard__workflow {
+	padding: 17px 17px;
+}
+
+.chatxai-dashboard__workflow:not(:last-child) {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.chatxai-dashboard__workflow-title {
+	font-size: 17px;
+	text-decoration: none;
+	color: #2694cf;
+}
+
+.chatxai-dashboard__workflow-description {
+	color: #aaaaaa;
+}
+
+.chatxai-dashboard-chart {
+	position: relative;
+}
+
+.chatxai-dashboard-chart__flot {
+	height: 150px;
+	margin: 12px 14px 20px;
+}
+
+@media (min-width: 800px) {
+	.chatxai-dashboard-chart__flot {
+		height: 190px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.chatxai-dashboard-chart__flot {
+		height: 200px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.chatxai-dashboard-chart__flot {
+		height: 220px;
+	}
+}
+
+.chatxai-dashboard-chart__flot .flot-x-axis > div {
+	margin-top: 11px;
+}
+
+.chatxai-dashboard-chart__tooltip {
+	z-index: 10;
+	position: absolute;
+	display: none;
+	background: #000000;
+	opacity: 0.75;
+	color: #ffffff;
+	padding: 3px 5px 4px;
+	font-weight: 500;
+	border-radius: 3px;
+	font-size: 11px;
+	line-height: 1;
+}
+
+.chatxai-dashboard-chart__header {
+	border-bottom: 1px solid #eee;
+	position: relative;
+	height: 73px;
+	*zoom: 1;
+	overflow: hidden;
+}
+
+.chatxai-dashboard-chart__header:before, .chatxai-dashboard-chart__header:after {
+	content: " ";
+	display: table;
+}
+
+.chatxai-dashboard-chart__header:after {
+	clear: both;
+}
+
+.chatxai-dashboard-chart__header-group {
+	padding: 16px 20px;
+	float: left;
+}
+
+.chatxai-dashboard-chart__header-group:not(:first-child) {
+	border-left: 1px solid #eee;
+}
+
+.chatxai-dashboard-chart__header .chatxai-arrow-link {
+	position: absolute;
+	right: 20px;
+	top: 28px;
+}
+
+.chatxai-dashboard-chart__header-figure {
+	color: #464646;
+	font-size: 21px;
+	font-weight: 300;
+	line-height: 1.1;
+}
+
+.chatxai-dashboard-chart__header-text {
+	color: #aaaaaa;
+	font-size: 12.5px;
+}
+
+.chatxai-dashboard-chart__legend {
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	border: 2px solid #E1E1E1;
+	margin-right: 1px;
+	border-radius: 50%;
+}
+
+.chatxai-dashboard-chart__legend--blue {
+	border-color: #3498db;
+}
+
+.chatxai-dashboard-chart__legend--purple {
+	border-color: #d0a0e4;
+}
+
+.chatxai-dashboard-chart__legend--green {
+	border-color: #72c9b2;
+}
+
+.chatxai-dashboard-list__header {
+	border-bottom: 1px solid #eee;
+	padding: 22px 20px;
+}
+
+.chatxai-dashboard-list__header .chatxai-arrow-link {
+	position: absolute;
+	right: 20px;
+	top: 22px;
+}
+
+.chatxai-dashboard-list__heading {
+	font-weight: 500;
+	color: #464646;
+	font-size: 14px;
+}
+
+.chatxai-dashboard-list__item {
+	padding: 12px 20px;
+	background: #f9f9f9;
+}
+
+.chatxai-dashboard-list__item:not(:last-child) {
+	border-bottom: 1px solid #eee;
+}
+
+.chatxai-dashboard-list__item-title {
+	text-decoration: none;
+	color: #2694cf;
+	font-weight: 500;
+}
+
+.chatxai-dashboard-list__item-text {
+	font-size: 12.5px;
+	color: #aaaaaa;
+}
+
+.chatxai-dashboard-list__item-button {
+	float: right;
+}
+
+.chatxai-dashboard-list__empty {
+	text-align: center;
+	background: #f9f9f9;
+	padding: 60px 20px;
+	color: #aaaaaa;
+}
+
+.chatxai-page h1:before {
+  content: '';
+  display: inline-block;
+  width: 27px;
+  height: 20px;
+  background-image: url("../img/chatxai-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 9px;
+  position: relative;
+  top: 2px;
+}
+
+.notice-chatx{
+	position: relative;
+}
+
+.notice-chatx.notice-chatx-icon:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: block;
+    width: 27px;
+    height: 20px;
+    background-image: url(../img/chatxai-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.notice-chatx h3{
+	margin-bottom: 5px;
+}
+
+.button.button-danger{
+	color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.button.button-danger:hover, .button.button-danger:focus {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+.text-danger {
+    color: #a94442;
+}
+
+.text-success {
+    color: #3c763d;
+}
+
+.text-warning {
+    color: #c7891e;
+}
+
+.cx-spinner {
+	background: url('/wp-admin/images/wpspin_light.gif') no-repeat;
+	background-size: 16px 16px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+
+.text-muted{
+	color: gray;
+	font-size: 12px;
+}
+
+.ui-dialog[aria-describedby="cartViewDialog"]{
+	margin-top: 40px;
+}
+
+#cartViewDialog.loading{
+	background: url('/wp-admin/images/wpspin_light.gif') no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
+	background-repeat: none
+}
